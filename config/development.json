@@ -1,0 +1,6 @@
+{
+    "name": "Mybarber API - Development",
+    "mail": {
+        "host": "dev-mail-server"
+    }
+}

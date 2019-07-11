@@ -1,0 +1,7 @@
+{
+    "jwtPrivateKey": "SECRET_KEY",
+    "name": "StuartDambi - Development",
+    "mail": {
+        "password": ""
+    }
+}

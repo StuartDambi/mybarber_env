@@ -1,0 +1,6 @@
+{
+    "name": "MyBarber API - Production",
+    "mail": {
+        "host": "prod-mail-server"
+    }
+}

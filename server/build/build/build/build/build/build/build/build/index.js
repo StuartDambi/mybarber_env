@@ -18,9 +18,9 @@ function _interopRequireDefault(obj) {
 
 const app = (0, _express2.default)();
 app.use(_express2.default.json());
-app.use('/users', _user2.default);
+app.use('/api/users', _user2.default);
 
 console.log(`Application name: ${_config2.default.get('name')}`);
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5500;
 app.listen(port, () => console.log(`MybarberApp listening to port ${port}...`));
 module.exports = app;

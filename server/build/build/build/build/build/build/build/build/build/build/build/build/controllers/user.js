@@ -8,8 +8,6 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-const userSignup = (req, res) => res.status(201).send({
-  status: res.statusCode,
-  data: _user2.default
-});
-module.exports = userSignup;
+// disable eslint
+const userController = (req, res) => res.send(_user2.default);
+module.exports = userController;

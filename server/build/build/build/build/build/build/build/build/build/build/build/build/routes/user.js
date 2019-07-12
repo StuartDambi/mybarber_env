@@ -13,7 +13,6 @@ function _interopRequireDefault(obj) {
 }
 
 const router = _express2.default.Router();
-
 // Return all the users
 router.get('/', _user2.default);
 

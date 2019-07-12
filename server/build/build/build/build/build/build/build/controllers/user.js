@@ -1,15 +1,22 @@
 'use strict';
 
-var _user = require('../models/user');
+var _pg = require('pg');
 
-var _user2 = _interopRequireDefault(_user);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-
-// disable eslint
+// Install PG --Fix Error
 const userController = {
-  userDisplay: (req, res) => res.send(_user2.default)
+  userDisplay: async (req, res) => {
+    const client = new _pg.Client();
+    client.connect().then(() => {
+      console.log('Connection Complete');
+      const sql = 'SELECT * FROM users';
+      return client.query(sql);
+    }).then(result => {
+      console.log('result?', result);
+      res.status(201).send({
+        status: res.statusCode,
+        data: result
+      });
+    });
+  }
 };
 module.exports = userController;

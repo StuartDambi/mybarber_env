@@ -9,5 +9,7 @@ function _interopRequireDefault(obj) {
 }
 
 // disable eslint
-const userController = (req, res) => res.send(_user2.default);
+const userController = {
+  userDisplay: (req, res) => res.send(_user2.default)
+};
 module.exports = userController;

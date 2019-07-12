@@ -17,5 +17,5 @@ const router = _express2.default.Router();
 router.get('/', _user2.default.userDisplay);
 
 // User signup
-router.post('/signup', (req, res) => res.send('We are signidddng up'));
+router.post('/signup', (req, res) => res.send('We are signing up'));
 module.exports = router;

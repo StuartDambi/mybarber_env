@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) {
 
 const router = _express2.default.Router();
 // Return all the users
-router.get('/', _user2.default);
+router.get('/', _user2.default.userDisplay);
 
 // User signup
 router.post('/signup', (req, res) => res.send('We are signidddng up'));

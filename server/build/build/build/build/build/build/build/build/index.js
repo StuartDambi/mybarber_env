@@ -16,6 +16,8 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
+require('dotenv').config();
+
 const app = (0, _express2.default)();
 app.use(_express2.default.json());
 app.use('/api/users', _user2.default);

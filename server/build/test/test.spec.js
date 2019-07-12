@@ -15,22 +15,23 @@ var _index2 = _interopRequireDefault(_index);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const { expect } = _chai2.default;
-const getUsers = 'api/users/';
+const getUsers = 'api/users';
 const testData = {
   id: 1,
-  name: 'Stuart Dambi',
+  name: '{Stuart Dambi}',
   email: 'stuartdambi@gmail.com',
   address: 'Kampala',
-  phone: '3422424234',
-  is_admin: true
+  phone: '0755710958',
+  is_admin: true,
+  password: '1234'
 };
 
 _chai2.default.use(_chaiHttp2.default);
 
 describe('Users', () => {
   it('should return all users', done => {
-    _chai2.default.request(_index2.default).get(getUsers).send(testData).end((_err, res) => {
-      expect(res.status).to.eq(201);
+    _chai2.default.request(_index2.default).get(getUsers).send(testData).end((_err, result) => {
+      expect(result.status).to.eq(201);
       done();
     });
   });
